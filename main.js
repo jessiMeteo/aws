@@ -47,8 +47,8 @@ async function loadStations(url) {
             return L.marker(latlng, {
                 icon: L.icon({
                     iconUrl: `icons/wifi.png`,
-                    //iconAnchor: [16, 37], //halbe Bildbreite und ganze Bildhöhe
-                    //popupAnchor: [0, -37] // Damit Popup nicht Icon überdeckt
+                    iconAnchor: [16, 37], //halbe Bildbreite und ganze Bildhöhe
+                    popupAnchor: [0, -35] // Damit Popup nicht Icon überdeckt
                 })
             })
         }, onEachFeature: function (feature, layer) {
