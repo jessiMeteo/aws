@@ -53,7 +53,8 @@ footer nav {
 
 .aws-div-icon span {
     border: 1px solid silver;
-    font-size: 1.25em;
+    border-radius: 25%;
+    font-size: 1em;
     font-weight: bold;
     padding: 0.3em;
     text-shadow: 
