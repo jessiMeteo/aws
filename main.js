@@ -80,12 +80,26 @@ function showTemperature(jsondata) {
             }
         },
         pointToLayer: function (feature, latlng) {
+            let color = getColor(feature.properties.LT, COLORS.temperature);
             return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span> ${feature.properties.LT} </span>`
+                    html: `<span style="background-color: ${color}"> ${feature.properties.LT} </span>`
                 }),
             })
         },
     }).addTo(overlays.temperature);
 }
+
+console.log(COLORS);
+
+function getColor(value, ramp) {
+    for (let rule of ramp) {
+        if (value >= rule.min && value < rule.max){
+            return rule.color;
+        }    
+    }
+}
+
+let testColor = getColor(-5, COLORS.temperature);
+console.log("TestColor für temp -5", testColor);
