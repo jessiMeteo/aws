@@ -90,7 +90,7 @@ function showTemperature(jsondata) {
             return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span style="background-color: ${color}"> ${feature.properties.LT.toFixed(1)} </span>`
+                    html: `<span style="background-color: ${color}"> ${feature.properties.LT.toFixed(1)}°C </span>`
                 }),
             })
         },
@@ -109,7 +109,7 @@ function showWindspeed(jsondata) {
             return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span style="background-color: ${color}"> ${feature.properties.WG.toFixed(2)} </span>`
+                    html:`<span style="background-color:${color}">${feature.properties.WG.toFixed(2)}km/h</span>`
                 }),
             })
         },
@@ -128,7 +128,7 @@ function showSnowheight(jsondata) {
             return L.marker(latlng, {
                 icon: L.divIcon({
                     className: "aws-div-icon",
-                    html: `<span style="background-color: ${color}"> ${feature.properties.HS} </span>`
+                    html: `<span style="background-color: ${color}"> ${feature.properties.HS.toFixed(0)}cm </span>`
                 }),
             })
         },
