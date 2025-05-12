@@ -171,3 +171,15 @@ function getColor(value, ramp) {
 
 let testColor = getColor(-5, COLORS.temperature);
 console.log("TestColor für temp -5", testColor);
+
+    // Change default options
+    L.control.rainviewer({ 
+        position: 'bottomleft',
+        nextButtonText: '>',
+        playStopButtonText: 'Play/Stop',
+        prevButtonText: '<',
+        positionSliderLabelText: "Hour:",
+        opacitySliderLabelText: "Opacity:",
+        animationInterval: 500,
+        opacity: 0.5
+    }).addTo(map);
