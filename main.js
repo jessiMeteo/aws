@@ -152,7 +152,7 @@ function showWinddir(jsondata) {
                 icon: L.divIcon({
                     className: "aws-div-icon",
                     html: `<span style="background-color: ${color}"> ${feature.properties.WR.toFixed(0)}° </span>
-                    <i class="fa-solid fa-arrow-right"style="color:${COLORS.wind}; transform: rotate(${feature.properties.WR}deg);"></i>`
+                    <i class="fa-solid fa-arrow-up"style="color:${COLORS.wind}; transform: rotate(${feature.properties.WR}deg);"></i>`
                 }),
             })
         },
