@@ -151,9 +151,9 @@ function showWinddir(jsondata) {
             let color = getColor(feature.properties.WG, COLORS.wind);
             return L.marker(latlng, {
                 icon: L.divIcon({
-                    className: "aws-div-icon",
-                    html: `<span style="background-color: ${color}"> ${feature.properties.WR.toFixed(0)}° </span>
-                    <i class="fa-solid fa-arrow-up"style="color:${COLORS.wind}; transform: rotate(${feature.properties.WR}deg);"></i>`
+                    className: "aws-div-icon-wind",
+                    html: `<span> <i style="color: ${color}; transform:rotate(${feature.properties.WR}deg" class ="fa-solid fa-circle-arrow-down"></i><!--${feature.properties.WR.toFixed(0)}° --> </span>
+                    <!-- <i class="fa-solid fa-arrow-down"style="color:${COLORS.wind}; transform: rotate(${feature.properties.WR}deg);"></i> -->`
                 }),
             })
         },
